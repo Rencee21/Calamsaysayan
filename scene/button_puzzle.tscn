@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://blsq31aq60dgs"]
+
+[ext_resource type="Texture2D" uid="uid://v7yaxpwwtpxh" path="res://art/Tile Map & Tile Sets/Dungeon_button_assets.png" id="1_17g4r"]
+[ext_resource type="Script" uid="uid://chcyspbpa4j1a" path="res://script/button.gd" id="2_qmw37"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1aecq"]
+size = Vector2(99, 101)
+
+[node name="button_puzzle" type="Sprite2D"]
+position = Vector2(187, 238)
+texture = ExtResource("1_17g4r")
+hframes = 3
+vframes = 4
+frame = 1
+script = ExtResource("2_qmw37")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_1aecq")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

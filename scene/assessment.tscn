@@ -1,0 +1,442 @@
+[gd_scene load_steps=19 format=3 uid="uid://c1o432ek00lc8"]
+
+[ext_resource type="Script" uid="uid://he25pw8o3m1i" path="res://script/assessment.gd" id="1_7wble"]
+[ext_resource type="FontFile" uid="uid://doydm8lvjw77v" path="res://art/font/Jersey15-Regular.ttf" id="2_y84be"]
+[ext_resource type="Texture2D" uid="uid://8t1japeebhf" path="res://art/Icon_Control/a_icon.png" id="3_x7keg"]
+[ext_resource type="Texture2D" uid="uid://cfag3baw2hlqc" path="res://art/Icon_Control/b_icon.png" id="4_rxws2"]
+[ext_resource type="Texture2D" uid="uid://krrocid5xphl" path="res://art/Icon_Control/c_icon-removebg-preview.png" id="5_3fbgl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mp5sh"]
+bg_color = Color(0.811765, 0.45098, 0.164706, 1)
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color(0.0445578, 0.0445579, 0.0445578, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkyyf"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dqxhh"]
+bg_color = Color(0.584314, 0.321569, 0.0588235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.966155, 0.967028, 0.976227, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wble"]
+bg_color = Color(0.584314, 0.321569, 0.0588235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="Animation" id="Animation_s82qd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label4:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label5:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label6:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label7:visible_ratio")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_j178j"]
+resource_name = "text_1"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_rt23i"]
+resource_name = "text_2"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_rrbeb"]
+resource_name = "text_3"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_x07os"]
+resource_name = "text_4"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_fbmb4"]
+resource_name = "text_5"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label5:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_dmk06"]
+resource_name = "text_6"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label6:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_2cw47"]
+resource_name = "text_7"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label7:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f8bmo"]
+_data = {
+&"RESET": SubResource("Animation_s82qd"),
+&"text_1": SubResource("Animation_j178j"),
+&"text_2": SubResource("Animation_rt23i"),
+&"text_3": SubResource("Animation_rrbeb"),
+&"text_4": SubResource("Animation_x07os"),
+&"text_5": SubResource("Animation_fbmb4"),
+&"text_6": SubResource("Animation_dmk06"),
+&"text_7": SubResource("Animation_2cw47")
+}
+
+[node name="Assessment" type="Panel"]
+offset_left = -1.0
+offset_right = 1279.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mp5sh")
+script = ExtResource("1_7wble")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 15.0
+offset_right = 1273.0
+offset_bottom = 520.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wkyyf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 56.0
+offset_right = 1153.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 40
+text = "You’ve explored Calamba’s treasures — from the Giant 
+Claypot to Rizal’s humble home and the old church by 
+the plaza."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 56.0
+offset_right = 1153.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 40
+text = "Before you enter the City College of Calamba, let’s see 
+how deeply you’ve understood the stories behind each 
+place."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 56.0
+offset_right = 1153.0
+offset_bottom = 448.0
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 40
+text = "Think carefully. The answers are hidden in what you’ve 
+already seen and learned."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 56.0
+offset_right = 1211.0
+offset_bottom = 485.0
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 40
+text = "In Calamba’s official seal, a clay pot (banga) is shown. 
+You’ve seen it many times before — standing proudly at the 
+town plaza. But what deeper meaning does it hold?
+
+A. It only represents the ancient tools of the people.
+B. It symbolizes Calamba’s creativity and livelihood, showing 
+how simple things can represent identity.
+C. It is merely a decoration from Spanish times."
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 24.0
+offset_right = 1220.0
+offset_bottom = 507.0
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 40
+text = "At the Rizal Shrine, every corner reflects the way young 
+José Rizal was raised. You’ve walked through those rooms 
+— the kitchen, the study, the chapel. What lesson does his 
+home teach us?\"
+
+A. That hard work, faith, and discipline built the foundation of 
+his greatness.
+B. That he lived a luxurious life full of servants and comfort.
+C. That his achievements came from talent alone."
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 57.0
+offset_right = 1153.0
+offset_bottom = 449.0
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 40
+text = "\"Remarkable! You didn’t just remember facts — you 
+understood the heart of Calamba’s heritage. 
+You may now step into the City College of Calamba."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 57.0
+offset_right = 1153.0
+offset_bottom = 449.0
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 40
+text = "You’ve seen the places, but their meaning hasn’t fully 
+settled in your heart. Reflect again on the stories 
+each landmark told you, then return."
+horizontal_alignment = 1
+vertical_alignment = 1
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="btn_next" type="Button" parent="."]
+layout_mode = 0
+offset_left = 903.0
+offset_top = 576.0
+offset_right = 1159.0
+offset_bottom = 672.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_dqxhh")
+text = "Next"
+
+[node name="btn_map" type="Button" parent="."]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 576.0
+offset_right = 385.0
+offset_bottom = 664.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y84be")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_7wble")
+text = "Go to Map"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 520.0
+offset_right = 1057.0
+offset_bottom = 720.0
+scale = Vector2(0.9, 0.9)
+theme_override_constants/separation = 100
+
+[node name="btn_A" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("3_x7keg")
+flat = true
+
+[node name="btn_B" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_rxws2")
+flat = true
+
+[node name="btn_C" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("5_3fbgl")
+flat = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_f8bmo")
+}
+
+[connection signal="pressed" from="btn_next" to="." method="_on_btn_next_pressed"]
+[connection signal="pressed" from="btn_map" to="." method="_on_btn_map_pressed"]
+[connection signal="pressed" from="HBoxContainer/btn_A" to="." method="_on_btn_a_pressed"]
+[connection signal="pressed" from="HBoxContainer/btn_B" to="." method="_on_btn_b_pressed"]
+[connection signal="pressed" from="HBoxContainer/btn_C" to="." method="_on_btn_c_pressed"]

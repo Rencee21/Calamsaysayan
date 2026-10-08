@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bubxeebmsr1uu"]
+
+[ext_resource type="Texture2D" uid="uid://c8xd3lbaiop1" path="res://art/Icon_Control/questionmark_icon-removebg-preview.png" id="1_u8dua"]
+[ext_resource type="Script" uid="uid://1qsdgm1woteg" path="res://script/exclamationmark.gd" id="2_u8dua"]
+
+[node name="Exclamation" type="Sprite2D"]
+position = Vector2(320, 136)
+texture = ExtResource("1_u8dua")
+hframes = 4
+vframes = 4
+frame = 9
+script = ExtResource("2_u8dua")

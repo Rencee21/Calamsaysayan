@@ -1,0 +1,225 @@
+[gd_scene load_steps=11 format=3 uid="uid://gpnwaki3vcvk"]
+
+[ext_resource type="Texture2D" uid="uid://dnb08w4a5ji78" path="res://art/Tile Map & Tile Sets/book_1.png" id="1_das5m"]
+[ext_resource type="Script" uid="uid://dhd4oye52ewuf" path="res://script/book.gd" id="1_ij7s6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ij7s6"]
+radius = 34.2345
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ij7s6"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_vorm0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label4:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_c828u"]
+resource_name = "text"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_w2trr"]
+resource_name = "text_2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_hmt2k"]
+resource_name = "text_3"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.46),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_3akd7"]
+resource_name = "text_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcufk"]
+_data = {
+&"RESET": SubResource("Animation_vorm0"),
+&"text": SubResource("Animation_c828u"),
+&"text_2": SubResource("Animation_w2trr"),
+&"text_3": SubResource("Animation_hmt2k"),
+&"text_4": SubResource("Animation_3akd7")
+}
+
+[node name="book_rizal" type="Node2D"]
+
+[node name="book" type="Area2D" parent="."]
+script = ExtResource("1_ij7s6")
+
+[node name="Book1" type="Sprite2D" parent="book"]
+position = Vector2(234.25, 316)
+scale = Vector2(0.101852, 0.113402)
+texture = ExtResource("1_das5m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book"]
+position = Vector2(233, 314)
+shape = SubResource("CircleShape2D_ij7s6")
+
+[node name="Panel" type="Panel" parent="book"]
+offset_left = 206.0
+offset_top = 416.0
+offset_right = 1056.0
+offset_bottom = 651.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ij7s6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="book"]
+offset_left = 309.0
+offset_top = 454.0
+offset_right = 979.0
+offset_bottom = 557.0
+text = "You discovered a Book — symbol of Rizal’s love for learning."
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="book"]
+offset_left = 309.0
+offset_top = 454.0
+offset_right = 979.0
+offset_bottom = 557.0
+text = "From a young age, Rizal was a dedicated student."
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="book"]
+offset_left = 309.0
+offset_top = 454.0
+offset_right = 979.0
+offset_bottom = 557.0
+text = "He studied in Manila at the Ateneo Municipal and later in Europe, where he mastered
+ multiple languages and became a doctor, writer, and scientist."
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Label4" type="Label" parent="book"]
+offset_left = 309.0
+offset_top = 454.0
+offset_right = 979.0
+offset_bottom = 557.0
+text = "This book represents his belief that education is the key to uplifting the nation."
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="CollectedLabel" type="Label" parent="book"]
+offset_left = 136.0
+offset_top = 243.0
+offset_right = 806.0
+offset_bottom = 346.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="book"]
+offset_left = 860.0
+offset_top = 561.0
+offset_right = 1026.0
+offset_bottom = 629.0
+text = "Next"
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="book"]
+libraries = {
+&"": SubResource("AnimationLibrary_fcufk")
+}
+
+[node name="Button2" type="Button" parent="book"]
+offset_left = 288.0
+offset_top = 236.0
+offset_right = 423.0
+offset_bottom = 291.0
+text = "Interact"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="book" to="book" method="_on_body_entered"]
+[connection signal="body_exited" from="book" to="book" method="_on_body_exited"]

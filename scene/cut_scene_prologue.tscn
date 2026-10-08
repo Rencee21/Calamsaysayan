@@ -1,0 +1,395 @@
+[gd_scene load_steps=20 format=3 uid="uid://c1k3ag7ivx0"]
+
+[ext_resource type="Script" uid="uid://d316troen5vnl" path="res://script/next.gd" id="1_ufajy"]
+[ext_resource type="FontFile" uid="uid://doydm8lvjw77v" path="res://art/font/Jersey15-Regular.ttf" id="2_rugxj"]
+[ext_resource type="Texture2D" uid="uid://cpbyv6jkq8enw" path="res://art/Game_Title_Assets/City College of Calamaba Art.png" id="3_lejq5"]
+[ext_resource type="Texture2D" uid="uid://ghxf7rwgvvk6" path="res://art/Game_Title_Assets/Clouds-removebg-preview.png" id="4_jtopd"]
+[ext_resource type="Script" uid="uid://crvj5gmewmtd0" path="res://script/cloud.gd" id="5_p74e3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7inmx"]
+bg_color = Color(0.808542, 0.528804, 0.245496, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3l6v1"]
+atlas = ExtResource("4_jtopd")
+region = Rect2(0, 0, 298, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egvns"]
+atlas = ExtResource("4_jtopd")
+region = Rect2(298, 0, 298, 208)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a38xw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3l6v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egvns")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 2.0
+}]
+
+[sub_resource type="Animation" id="Animation_ufajy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label2:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label3:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label4:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(72, 720)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label6:theme_override_colors/font_color")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_d8vl5"]
+resource_name = "Text"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.93333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_rugxj"]
+resource_name = "Text_2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label2:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_xihiy"]
+resource_name = "Text_3"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label3:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_78d7b"]
+resource_name = "Text_4"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label4:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.46),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_7inmx"]
+resource_name = "text_5"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label5:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.09, 2.09, 3.08, 4.1, 5.09, 6.08072, 7.07072, 8.10466, 9.1184, 10.1284, 11.1184, 12.1284, 13.1696, 14.1275, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(72, 720), Vector2(72, 657), Vector2(72, 609), Vector2(72, 525), Vector2(72, 474), Vector2(72, 384), Vector2(72, 287), Vector2(72, 202), Vector2(72, 126), Vector2(72, 17), Vector2(72, -124), Vector2(72, -212), Vector2(72, -301), Vector2(72, -368), Vector2(72, -404), Vector2(72, -704)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label6:theme_override_colors/font_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(14.3667, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bwugm"]
+resource_name = "text_6"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rugxj"]
+_data = {
+&"RESET": SubResource("Animation_ufajy"),
+&"Text": SubResource("Animation_d8vl5"),
+&"Text_2": SubResource("Animation_rugxj"),
+&"Text_3": SubResource("Animation_xihiy"),
+&"Text_4": SubResource("Animation_78d7b"),
+&"text_5": SubResource("Animation_7inmx"),
+&"text_6": SubResource("Animation_bwugm")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwugm"]
+bg_color = Color(0.584314, 0.321569, 0.0588235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.966155, 0.967028, 0.976227, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lejq5"]
+bg_color = Color(0.584314, 0.321569, 0.0588235, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[node name="Cut_Scene_Prologue" type="Node2D"]
+script = ExtResource("1_ufajy")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7inmx")
+
+[node name="CityCollegeOfCalamabaArt" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.611765)
+self_modulate = Color(0.815489, 0.461557, 0.126423, 0.8)
+light_mask = 0
+position = Vector2(643, 549)
+scale = Vector2(1.5925, 1.71859)
+texture = ExtResource("3_lejq5")
+
+[node name="Cloud" type="AnimatedSprite2D" parent="."]
+position = Vector2(925.5, 187.5)
+scale = Vector2(2.19128, 1.28365)
+sprite_frames = SubResource("SpriteFrames_a38xw")
+animation = &"new_animation"
+script = ExtResource("5_p74e3")
+
+[node name="Cloud2" type="AnimatedSprite2D" parent="."]
+position = Vector2(252, 271)
+scale = Vector2(1.60403, 1)
+sprite_frames = SubResource("SpriteFrames_a38xw")
+animation = &"new_animation"
+script = ExtResource("5_p74e3")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 160.0
+offset_right = 1152.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 20
+text = "Prologue1"
+max_lines_visible = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 160.0
+offset_right = 1152.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 20
+text = "Prologue2"
+max_lines_visible = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 160.0
+offset_right = 1152.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 20
+text = "Prologue3"
+max_lines_visible = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 128.0
+offset_top = 160.0
+offset_right = 1152.0
+offset_bottom = 320.0
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 20
+text = "Prologue4"
+max_lines_visible = 2
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 72.0
+offset_top = -444.855
+offset_right = 1243.0
+offset_bottom = 146.145
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 40
+text = "'Calamba City, nestled at the foot of Mount Makiling and beside Laguna de Bay, 
+is one of the most historic places in the Philippines. Once part of Tabuco
+ (now Cabuyao), it became an independent pueblo in 1742 and later grew 
+into a prosperous town. Its name comes from a legend—Spanish soldiers 
+once asked a woman the place’s name, and she answered with what she was 
+carrying: a clay stove (kalan) and a water jar (banga). From this, 
+the name Calamba was born, now symbolized by the giant clay pot in the 
+city plaza. On April 21, 2001, Calamba was officially declared a city, 
+marking its transformation from a humble settlement
+ to a thriving cultural and historical hub of Laguna.\"
+"
+horizontal_alignment = 1
+max_lines_visible = 18
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 56.0
+offset_top = 38.0
+offset_right = 1227.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 35
+text = "'Calamba City, nestled at the foot of Mount Makiling and beside Laguna de Bay, 
+is one of the most historic places in the Philippines. Once part of Tabuco
+ (now Cabuyao), it became an independent pueblo in 1742 and later grew 
+into a prosperous town. Its name comes from a legend—Spanish soldiers 
+once asked a woman the place’s name, and she answered with what she was 
+carrying: a clay stove (kalan) and a water jar (banga). From this, 
+the name Calamba was born, now symbolized by the giant clay pot in the 
+city plaza. On April 21, 2001, Calamba was officially declared a city, 
+marking its transformation from a humble settlement
+ to a thriving cultural and historical hub of Laguna.\"
+"
+horizontal_alignment = 1
+max_lines_visible = 18
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 64.0
+offset_top = 16.0
+offset_right = 1216.0
+offset_bottom = 592.0
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rugxj")
+}
+
+[node name="Button" type="Button" parent="."]
+offset_left = 903.0
+offset_top = 576.0
+offset_right = 1159.0
+offset_bottom = 672.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_bwugm")
+text = "Next"
+
+[node name="Back" type="Button" parent="."]
+offset_left = 128.0
+offset_top = 576.0
+offset_right = 384.0
+offset_bottom = 672.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_rugxj")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lejq5")
+text = "Back"
+
+[connection signal="animation_looped" from="Cloud" to="Cloud" method="_on_animation_looped"]
+[connection signal="animation_looped" from="Cloud2" to="Cloud2" method="_on_animation_looped"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
